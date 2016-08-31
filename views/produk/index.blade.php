@@ -14,20 +14,20 @@
                             @foreach(list_category() as $categories)
                             <li>
                                 @if($categories->parent=='0')
-                                <a href="{{ slugKategori($categories) }}">{{ $categories->nama }}</a>
+                                <a href="{{ category_url($categories) }}">{{ $categories->nama }}</a>
                                     @if(count($categories->anak) > 0)
                                     <span class="down"></span>
                                     <ul>
                                         @foreach($categories->anak as $submenu1)
                                         @if($submenu1->parent == $categories->id)
                                         <li>
-                                            <a href="{{ slugKategori($submenu1) }}">{{ $submenu1->nama }}</a>
+                                            <a href="{{ category_url($submenu1) }}">{{ $submenu1->nama }}</a>
                                             @if(count($submenu1->anak) > 0)
                                             <span class="down"></span>
                                             <ul>
                                                 @foreach($submenu1->anak as $submenu2)
                                                 @if($submenu2->parent == $submenu1->id)
-                                                <li><a href="{{ slugKategori($submenu2) }}">{{ $submenu2->nama }}</a></li>
+                                                <li><a href="{{ category_url($submenu2) }}">{{ $submenu2->nama }}</a></li>
                                                 @endif
                                                 @endforeach
                                             </ul>
@@ -107,7 +107,7 @@
                             </div>
                             <div class="col-md-3 col-sm-2 text-right">
                                 <select id="sort" class="form-control col-sm-3" data-rel="{{ URL::current() }}">
-                                    <option value="default" {{ Input::get('sort')=="" ? 'selected="selected"' : '' }}>Default</option>
+                                    <option value="default" {{ Input::get('sort')=="default" ? 'selected="selected"' : '' }}>Default</option>
                                     <option value="az" {{ Input::get('sort')=="az" ? 'selected="selected"' : '' }}>Name (A - Z)</option>
                                     <option value="za" {{ Input::get('sort')=="za" ? 'selected="selected"' : '' }}>Name (Z - A)</option>
                                     <option value="low" {{ Input::get('sort')=="low" ? 'selected="selected"' : '' }}>Price (Low &gt; High)</option>

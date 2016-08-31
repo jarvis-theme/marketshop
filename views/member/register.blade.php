@@ -94,7 +94,6 @@
                 </div>
                 <!--Middle Part End -->
                 <!--Right Part Start -->
-                <li><a href="login.html">Account</a></li>
                 <aside id="column-right" class="col-sm-3 hidden-xs">
                     <h3 class="subtitle">Account</h3>
                     <div class="list-group">

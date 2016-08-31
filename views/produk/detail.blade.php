@@ -178,7 +178,7 @@
                             @foreach(recentBlog() as $side_article)
                             <div class="item">
                                 <h4><i><a href="{{ blog_url($side_article) }}">{{ $side_article->judul }}</a></i></h4>
-                                <p>{{ $side_article->isi }}</p>
+                                <p>{{ short_description($side_article->isi,450) }}</p>
                             </div>
                             @endforeach
                         </div>
