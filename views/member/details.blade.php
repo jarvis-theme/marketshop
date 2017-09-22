@@ -62,7 +62,7 @@
                                 </td>
                                 <td class="text-center">{{ waktu($item->tanggalOrder) }}</td>
                                 <td class="text-right">{{ price($item->total) }}</td>
-                                <td class="text-center"><a class="btn btn-info" title="View" data-toggle="tooltip" href="{{url('konfirmasiorder/'.$item->id)}}" data-original-title="View"><i class="fa fa-eye"></i></a></td>
+                                <td class="text-center"><a class="btn btn-info" title="View" target="_blank" data-toggle="tooltip" href="{{url('konfirmasiorder/'.$item->id)}}" data-original-title="View"><i class="fa fa-eye"></i></a></td>
                             </tr>
                             @endforeach
                         </tbody>

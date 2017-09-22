@@ -2196,3 +2196,4 @@ form[name="order"] > input[name="SAVE"]:hover {
 .btn-veritrans { background: #00aee7; border: none; padding: 10px; color: #fff }
 .btn-veritrans:hover { cursor: pointer; opacity: 0.7 }
 #news .item { padding: 0 1px; }
+.picmix-bottom { width: 45px; margin-top: -7px; }
